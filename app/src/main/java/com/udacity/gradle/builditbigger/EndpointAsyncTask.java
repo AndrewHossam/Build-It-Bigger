@@ -4,7 +4,15 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 
+import com.example.andrew.myapplication.backend.myApi.MyApi;
+import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.extensions.android.json.AndroidJsonFactory;
+import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
+import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+
 import java.io.IOException;
+
+import andrewhossam.mylibrary.LibActivity;
 
 /**
  * Created by Andrew on 5/5/2017.
@@ -38,7 +46,7 @@ class EndpointAsyncTask extends AsyncTask<Context, Void, String> {
 
 
         try {
-            return myApiService.tellJoke().execute().getData();
+            return myApiService.sayHi().execute().getData();
         } catch (IOException e) {
             return e.getMessage();
         }
@@ -47,9 +55,9 @@ class EndpointAsyncTask extends AsyncTask<Context, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         // Create Intent to launch JokeFactory Activity
-        Intent intent = new Intent(context, DisplayJokeActivity.class);
+        Intent intent = new Intent(context, LibActivity.class);
         // Put the string in the envelope
-        intent.putExtra(DisplayJokeActivity.JOKE_KEY, result);
+        intent.putExtra("joke", result);
         context.startActivity(intent);
         //Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }

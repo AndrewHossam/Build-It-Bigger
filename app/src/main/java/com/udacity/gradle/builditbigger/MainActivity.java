@@ -1,5 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -12,11 +13,13 @@ import com.udacity.gradle.jokes.Joker;
 import andrewhossam.mylibrary.LibActivity;
 
 public class MainActivity extends ActionBarActivity {
+    static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        context = this;
     }
 
 
