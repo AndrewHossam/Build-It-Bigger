@@ -24,6 +24,10 @@ android {
         free {
             applicationId "com.udacity.gradle.builditbigger.free"
             versionName "1.0­free"
+            dependencies {
+                compile 'com.google.android.gms:play-services:10.2.1'
+                compile 'com.google.firebase:firebase-ads:10.0.1'
+            }
         }
 
         paid {
@@ -47,12 +51,10 @@ dependencies {
     })
 
     compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.google.android.gms:play-services:10.2.1'
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile 'com.google.api-client:google-api-client:1.22.0'
     compile 'com.google.http-client:google-http-client-android:1.22.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
-    compile 'com.google.firebase:firebase-ads:10.0.1'
     testCompile 'junit:junit:4.12'
 }
 
