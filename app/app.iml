@@ -230,8 +230,5 @@
     <orderEntry type="module" module-name="mylibrary" exported="" />
     <orderEntry type="module" module-name="backend" exported="" />
     <orderEntry type="module" module-name="javaJokes" exported="" />
-    <orderEntry type="module" module-name="mylibrary" exported="" />
-    <orderEntry type="module" module-name="backend" exported="" />
-    <orderEntry type="module" module-name="javaJokes" exported="" />
   </component>
 </module>
